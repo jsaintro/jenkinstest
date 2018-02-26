@@ -1,0 +1,10 @@
+pipeline {
+    agent { docker 'hypriot/rpi-python' }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
+}
