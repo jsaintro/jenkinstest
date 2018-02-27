@@ -1,11 +1,11 @@
 pipeline {
-    agent { docker 'hypriot/rpi-python' }
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                sh 'python --version'
-                sh 'pwd'
-                sh 'hostname'
+                sh 'node --version'
             }
         }
     }
