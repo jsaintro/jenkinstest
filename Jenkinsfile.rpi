@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'arm64v8/node' }
+        docker { image 'arm32v7/node' }
     }
     stages {
         stage('Test') {
