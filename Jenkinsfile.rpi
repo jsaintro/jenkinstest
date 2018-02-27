@@ -1,11 +1,15 @@
 pipeline {
-    agent {
-        docker { image 'arm32v7/node:7' }
+    agent any
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
     }
+
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'node --version'
+                sh 'printenv'
             }
         }
     }
