@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'arm64v8/node' }
     }
     stages {
         stage('Test') {
