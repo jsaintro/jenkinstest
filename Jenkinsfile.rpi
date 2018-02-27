@@ -4,7 +4,7 @@ pipeline {
         stage('No-op') {
             steps {
                 sh 'ls'
-                broken bork bork
+                exit 1
             }
         }
     }
